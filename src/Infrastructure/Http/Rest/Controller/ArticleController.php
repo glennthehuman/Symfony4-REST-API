@@ -5,19 +5,17 @@ namespace App\Infrastructure\Http\Rest\Controller;
 
 use App\Application\DTO\ArticleDTO;
 use App\Application\Service\ArticleService;
-use App\Domain\Model\Article\Article;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
-use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\View\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class ArticleController
  * @package App\Infrastructure\Http\Rest\Controller
  */
-final class ArticleController extends FOSRestController
+final class ArticleController extends AbstractFOSRestController
 {
     /**
      * @var ArticleService
